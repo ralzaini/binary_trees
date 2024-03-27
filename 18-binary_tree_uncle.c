@@ -28,16 +28,13 @@ binary_tree_t *tree_sibling(binary_tree_t *node)
 
 binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
-	binary_tree_t *uncle;
-	/**
-	* An uncle node is a sibiling to the parent node.
-	* We need to return a pointer to the given node's parent sibiling
-	*/
+	binary_tree_t *t_uncle;
+
 	if (!node)
 		return (NULL);
 	if (!node->parent)
 		return (NULL);
-	uncle = tree_sibling(node->parent);
+	t_uncle = tree_sibling(node->parent);
 
-	return (uncle);
+	return (t_uncle);
 }
