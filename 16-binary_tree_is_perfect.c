@@ -33,7 +33,7 @@ int tree_depth(const binary_tree_t *tree)
 /**
  * full - Check if the tree is perfect
  * @tree: pointer to the binary tree being checked
- * @d: depth of the tree
+ * @depth: depth of the tree
  * @level: level
  * Return: 1 if tree is perfect, 0 otherwise
  */

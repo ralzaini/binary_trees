@@ -19,5 +19,5 @@ size_t binary_tree_depth(const binary_tree_t *tree)
 	if (!tree->parent)
 		return (height);
 	else
-		return (height +1);
+		return (height + 1);
 }
