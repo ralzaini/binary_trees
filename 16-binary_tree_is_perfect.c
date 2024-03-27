@@ -7,10 +7,10 @@
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-    if (tree == NULL)
-        return (0);
+	if (tree == NULL)
+		return (0);
 
-    return (perfect(tree));
+	return (perfect(tree));
 }
 
 /**
@@ -20,14 +20,14 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
  */
 int tree_depth(const binary_tree_t *tree)
 {
-    int depth = 0;
+	int depth = 0;
 
-    while (tree != NULL)
-    {
-        depth++;
-        tree = tree->left;
-    }
-    return (depth);
+	while (tree != NULL)
+	{
+		depth++;
+		tree = tree->left;
+	}
+	return (depth);
 }
 
 /**
@@ -39,16 +39,16 @@ int tree_depth(const binary_tree_t *tree)
  */
 int full(const binary_tree_t *tree, int depth, int level)
 {
-    if (tree == NULL)
-        return (1);
+	if (tree == NULL)
+		return (1);
 
-    if (tree->left == NULL && tree->right == NULL)
-        return (depth == level + 1);
+	if (tree->left == NULL && tree->right == NULL)
+		return (depth == level + 1);
 
-    if (tree->left == NULL || tree->right == NULL)
-        return (0);
+	if (tree->left == NULL || tree->right == NULL)
+		return (0);
 
-    return (full(tree->left, depth, level) && full(tree->left, depth, level));
+	return (full(tree->left, depth, level) && full(tree->left, depth, level));
 }
 
 /**
@@ -58,7 +58,7 @@ int full(const binary_tree_t *tree, int depth, int level)
  */
 int perfect(const binary_tree_t *tree)
 {
-    int depth = tree_depth(tree);
+	int depth = tree_depth(tree);
 
-    return (full(tree, depth, 0));
+	return (full(tree, depth, 0));
 }
